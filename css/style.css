@@ -1,0 +1,60 @@
+body{
+	Background-Color:#000000; 
+	color:#FFFFFF; 
+}
+a:link {
+    color: #CCCCCC;
+}
+a:visited {
+    color: #CCCCCC;
+}
+a:active {
+    color: #CCCCCC;
+}
+div {
+	Background-Color:#333333;
+	padding:2px;
+	font-family:Arial;
+	font-size:14px;
+}
+
+#titulo{
+	color:#CCCCCC;
+	font-size:48px;
+	margin:5px;
+}
+
+ul{
+    display: table;
+    width: 100%;
+	margin:0;
+	padding:0;
+    table-layout: fixed;
+}
+
+ul li{
+	display: table-cell;
+}
+
+ul a {
+    display: block;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul span {
+    display: block;
+    text-align: center;
+	font-size: 24px;
+}
+
+#anterior{
+    text-align: left;
+}
+
+#proximo{
+    text-align: right;
+}

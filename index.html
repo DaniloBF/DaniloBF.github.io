@@ -1,0 +1,64 @@
+<html>
+<head>
+    <META http-equiv="Content-Type" content="text/html" />
+    <TITLE>Lux in Tenebris</TITLE>
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<script>
+		var pos = 1;
+		var linkAnt = 'html/0001.html';
+		var linkPos = 'html/0002.html';
+		var limite = 6;
+		function voltar(){
+			if(pos != 1){
+				document.getElementById("conteudo").src = linkAnt;
+				pos--;
+				getLink();
+			}
+		}
+		function avancar(){
+			if(pos != limite){
+				document.getElementById("conteudo").src = linkPos;
+				pos++;
+				getLink();
+			}
+		}
+		function getLink(){
+			if(pos < 10){
+					linkAnt = "html/000"+ (pos-1) +".html";
+				}else{
+					if(pos < 100){
+						linkAnt = "html/00"+ (pos-1) +".html";
+					}else{
+						if(pos < 1000){
+							linkAnt = "html/0"+ (pos-1) +".html";
+						}	
+					}
+				}
+				if(pos < 10){
+					linkPos = "html/000"+ (pos+1) +".html";
+				}else{
+					if(pos < 100){
+						linkPos = "html/000"+ (pos+1) +".html";
+					}else{
+						if(pos < 1000){
+							linkPos = "html/000"+ (pos+1) +".html";
+						}	
+					}
+				}
+				document.getElementById('subtitulo').innerHTML="Log #" + pos;
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p id="titulo" align="center">LUX IN TENEBRIS</p>
+		<ul>
+			<li><a id="anterior" onclick="voltar()"><<< ANTERIOR</a></li>
+			<li><span id="subtitulo">Log #1</span></li>
+			<li><a id="proximo" onclick="avancar()">PRÓXIMO >>></a></li>
+		</ul>
+	</div>
+	<br/>
+	<iframe src="html/0001.html" id="conteudo" width="100%" frameborder=0 height="85%" />
+</body>
+</html>
