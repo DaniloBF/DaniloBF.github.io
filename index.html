@@ -50,8 +50,15 @@
 	</script>
 </head>
 <body height="100%">
-	<iframe src="html/menu.html" width="100%" height="15%" frameborder=0></iframe>
+	<div>
+		<p id="titulo" align="center">LUX IN TENEBRIS</p>
+		<ul>
+			<li><a id="anterior" onclick="voltar()"><<< ANTERIOR</a></li>
+			<li><span id="subtitulo">Log #1</span></li>
+			<li><a id="proximo" onclick="avancar()">PRÓXIMO >>></a></li>
+		</ul>
+	</div>
 	<br/>
-	<iframe src="html/0001.html" id="conteudo" width="100%" frameborder=0 height="85%"></iframe>
+	<iframe src="html/0001.html" id="conteudo" width="100%" frameborder=0 height="85%" />
 </body>
 </html>
