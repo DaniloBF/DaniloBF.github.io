@@ -23,28 +23,29 @@
 			}
 		}
 		function getLink(){
-			if(pos < 10){
-					linkAnt = "html/000"+ (pos-1) +".html";
+			if(pos < 11){
+				linkAnt = "html/000"+ (pos-1) +".html";
+			}else{
+				if(pos < 101){
+					linkAnt = "html/00"+ (pos-1) +".html";
 				}else{
-					if(pos < 100){
-						linkAnt = "html/00"+ (pos-1) +".html";
-					}else{
-						if(pos < 1000){
-							linkAnt = "html/0"+ (pos-1) +".html";
-						}	
-					}
+					if(pos < 1001){
+						linkAnt = "html/0"+ (pos-1) +".html";
+					}	
 				}
-				if(pos < 10){
-					linkPos = "html/000"+ (pos+1) +".html";
+			}
+			
+			if(pos < 9){
+				linkPos = "html/000"+ (pos+1) +".html";
+			}else{
+				if(pos < 99){
+					linkPos = "html/00"+ (pos+1) +".html";
 				}else{
-					if(pos < 100){
-						linkPos = "html/00"+ (pos+1) +".html";
-					}else{
-						if(pos < 1000){
-							linkPos = "html/0"+ (pos+1) +".html";
-						}	
-					}
+					if(pos < 999){
+						linkPos = "html/0"+ (pos+1) +".html";
+					}	
 				}
+			}
 				document.getElementById('subtitulo').innerHTML="Log #" + pos;
 		}
 	</script>
