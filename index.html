@@ -23,30 +23,19 @@
 			}
 		}
 		function getLink(){
-			if(pos < 11){
-				linkAnt = "html/000"+ (pos-1) +".html";
-			}else{
-				if(pos < 101){
-					linkAnt = "html/00"+ (pos-1) +".html";
-				}else{
-					if(pos < 1001){
-						linkAnt = "html/0"+ (pos-1) +".html";
-					}	
-				}
+			linkAnt = "" + (pos-1);
+			while (linkAnt.length < 4){
+				linkAnt = "0" + linkAnt;
 			}
+			linkAnt = "html/" + linkAnt + ".html";
 			
-			if(pos < 8){
-				linkPos = "html/000"+ (pos+1) +".html";
-			}else{
-				if(pos < 98){
-					linkPos = "html/00"+ (pos+1) +".html";
-				}else{
-					if(pos < 998){
-						linkPos = "html/0"+ (pos+1) +".html";
-					}	
-				}
+			linkPos = "" + (pos+1);
+			while (linkPos.length < 4){
+				linkPos = "0" + linkPos;
 			}
-				document.getElementById('subtitulo').innerHTML="Log #" + pos;
+			linkPos = "html/" + linkPos + ".html";
+			
+			document.getElementById('subtitulo').innerHTML="Log #" + pos;
 		}
 	</script>
 </head>
